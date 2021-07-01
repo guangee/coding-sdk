@@ -6,8 +6,8 @@
 
 ```xml
 <parent>
-<groupId>com.github.guangee.parent</groupId>
-<artifactId>parent</artifactId>
+<groupId>com.github.guangee.coding-sdk</groupId>
+<artifactId>coding-sdk</artifactId>
 <version>版本号</version>
 </parent>
 ```
