@@ -1,9 +1,7 @@
 package com.coding.common;
 
+import com.sun.istack.internal.NotNull;
 import lombok.Data;
-import org.hibernate.validator.constraints.Range;
-
-import javax.validation.constraints.NotNull;
 
 @Data
 public class LedOrderUtil {
@@ -94,28 +92,24 @@ public class LedOrderUtil {
          * 小时
          */
         @NotNull
-        @Range(max = 999, min = 0, message = "小时必须在次区间内")
         private Integer hour;
 
         /**
          * 分钟
          */
         @NotNull
-        @Range(max = 59, min = 0, message = "分钟必须在次区间内")
         private Integer minutes;
 
         /**
          * 秒
          */
         @NotNull
-        @Range(max = 59, min = 0, message = "秒必须在次区间内")
         private Integer second;
 
         /**
          * 毫秒
          */
         @NotNull
-        @Range(max = 999, min = 0, message = "毫秒必须在次区间内")
         private Integer timeMillis;
 
 
