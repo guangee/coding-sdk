@@ -1,6 +1,5 @@
 package com.coding.common;
 
-import com.sun.istack.internal.NotNull;
 import lombok.Data;
 
 @Data
@@ -91,25 +90,21 @@ public class LedOrderUtil {
         /**
          * 小时
          */
-        @NotNull
         private Integer hour;
 
         /**
          * 分钟
          */
-        @NotNull
         private Integer minutes;
 
         /**
          * 秒
          */
-        @NotNull
         private Integer second;
 
         /**
          * 毫秒
          */
-        @NotNull
         private Integer timeMillis;
 
 
