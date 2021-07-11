@@ -122,7 +122,7 @@ public class LedOrderUtil {
         private int b;
 
         public String getContent() {
-            return String.format("rgb(%s,%s,%s)", r, g, b);
+            return String.format("%s/%s/%s", r, g, b);
         }
     }
 }
