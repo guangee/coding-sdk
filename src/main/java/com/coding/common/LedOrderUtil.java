@@ -39,7 +39,8 @@ public class LedOrderUtil {
 
 
     public static String toHexString(int n) {
-        return Integer.toHexString(n);
+        return String.valueOf(n);
+//        return Integer.toHexString(n);
     }
 
 
