@@ -1,6 +1,8 @@
 package com.coding.common;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 public class LedOrderUtil {
@@ -24,7 +26,7 @@ public class LedOrderUtil {
      * @return 颜色设置命令
      */
     public static String colorOrder(String color) {
-        return String.format("color_%s#", color.replace("#", ""));
+        return String.format("color_%s#", ColorUtil.toColor(color).getContent());
     }
 
     /**
@@ -34,7 +36,7 @@ public class LedOrderUtil {
      * @return 波长设置命令
      */
     public static String waveOrder(Integer wave) {
-        return String.format("wave_%s#", toHexString(wave));
+        return String.format("wave_%s#", ColorUtil.wavelengthToRGB(wave).getContent());
     }
 
 
@@ -109,5 +111,18 @@ public class LedOrderUtil {
         private Integer timeMillis;
 
 
+    }
+
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Data
+    public static class ColorItem {
+        private int r;
+        private int g;
+        private int b;
+
+        public String getContent() {
+            return String.format("rgb(%s,%s,%s)", r, g, b);
+        }
     }
 }
