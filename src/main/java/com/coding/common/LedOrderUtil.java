@@ -85,8 +85,35 @@ public class LedOrderUtil {
     public static String loopOrder(Integer loop) {
         return String.format("loop_%s#", toHexString(loop));
     }
+    /**
+     * 设置启动命令
+     *
+     * @return 设置启动命令
+     */
+    public static String startOrder() {
+        return "start_#";
+    }
+    /**
+     * 设置停止命令
+     *
+     * @return 停止命令
+     */
+    public static String stopOrder() {
+        return "stop_#";
+    }
+
+    /**
+     * 设置暂停命令
+     *
+     * @return 暂停命令
+     */
+    public static String reseOrder() {
+        return "rese_#";
+    }
 
 
+    @NoArgsConstructor
+    @AllArgsConstructor
     @Data
     public static class MyTimeParam {
 
