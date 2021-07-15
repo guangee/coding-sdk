@@ -85,6 +85,7 @@ public class LedOrderUtil {
     public static String loopOrder(Integer loop) {
         return String.format("loop_%s#", toHexString(loop));
     }
+
     /**
      * 设置启动命令
      *
@@ -93,6 +94,7 @@ public class LedOrderUtil {
     public static String startOrder() {
         return "start_#";
     }
+
     /**
      * 设置停止命令
      *
@@ -109,6 +111,23 @@ public class LedOrderUtil {
      */
     public static String reseOrder() {
         return "rese_#";
+    }
+
+    /**
+     * 修改波特率命令
+     * Baud_com1  对应9600
+     * Baud_com2  对应14400
+     * Baud_com3  对应19200
+     * Baud_com4  对应38400
+     * Baud_com5  对应56000
+     * Baud_com6  对应57600
+     * Baud_com7  对应115200
+     *
+     * @return 修改波特率命令
+     */
+    public static String baudOrder(int x) {
+
+        return String.format("Baud_com%s#", x);
     }
 
 

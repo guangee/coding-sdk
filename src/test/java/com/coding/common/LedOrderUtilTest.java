@@ -22,5 +22,8 @@ public class LedOrderUtilTest {
         System.out.printf("设置启动命令:%s\n", LedOrderUtil.startOrder());
         System.out.printf("设置停止命令:%s\n", LedOrderUtil.stopOrder());
         System.out.printf("设置暂停命令:%s\n", LedOrderUtil.reseOrder());
+        System.out.printf("修改波特率命令1:%s\n", LedOrderUtil.baudOrder(1));
+        System.out.printf("修改波特率命令2:%s\n", LedOrderUtil.baudOrder(2));
+        System.out.printf("修改波特率命令3:%s\n", LedOrderUtil.baudOrder(3));
     }
 }
